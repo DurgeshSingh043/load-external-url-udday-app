@@ -1,0 +1,1 @@
+set PORT=3011 && yarn && yarn start
