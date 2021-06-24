@@ -1,0 +1,27 @@
+@import '../../../styles';
+
+.login-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  &__container {
+    min-width: pxToRem(300);
+    &__field1,
+    &__field2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: pxToRem(8);
+    }
+    &__CTA {
+      margin-top: pxToRem(16);
+      .button {
+        min-width: pxToRem(150);
+        @include screen(mobile) {
+          min-width: pxToRem(100);
+        }
+      }
+    }
+  }
+}

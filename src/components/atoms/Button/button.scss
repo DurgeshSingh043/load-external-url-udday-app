@@ -1,0 +1,24 @@
+@import '../../../styles';
+
+.button {
+  padding: pxToRem(8) pxToRem(12);
+  font-size: pxToRem(12);
+  font-weight: 700;
+  border-radius: pxToRem(4);
+  &:disabled {
+    opacity: 0.7;
+  }
+  @include screen(mobile) {
+    padding: pxToRem(6) pxToRem(8);
+  }
+}
+
+.outline {
+  border: pxToRem(2) solid grey;
+  color: #575757;
+}
+
+.filled {
+  background-color: #575757;
+  color: #f9f9f9;
+}

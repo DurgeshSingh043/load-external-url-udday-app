@@ -1,0 +1,63 @@
+@import '../../../styles';
+
+.landing-page-component {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &__header,
+  &__content {
+    display: flex;
+  }
+  &__header {
+    justify-content: space-around;
+    align-items: center;
+    padding: pxToRem(24) 0;
+    @include screen(mobile) {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: pxToRem(12) 0;
+      &--display-name,
+      &--CTA {
+        order: 1;
+        margin: 0 pxToRem(8);
+      }
+      &--field1 {
+        order: 2;
+        width: 100%;
+        margin: pxToRem(12);
+      }
+      &--field2 {
+        order: 3;
+        width: 100%;
+        margin: 0 pxToRem(12) pxToRem(8);
+      }
+    }
+  }
+  &__content {
+    flex: 1;
+    background-color: #ebebeb;
+    border-top: 2px solid grey;
+    &__view1,
+    &__view2 {
+      padding: pxToRem(24) pxToRem(24) 0;
+      overflow-y: auto;
+      width: 50%;
+    }
+    &__view1 {
+      border-right: 2px solid grey;
+    }
+    @include screen(mobile) {
+      flex-direction: column;
+      &__view1,
+      &__view2 {
+        flex: 1;
+        padding: pxToRem(8) pxToRem(8) 0;
+        width: calc(100% - 16px);
+        max-height: calc((100vh - 188px) / 2);
+      }
+      &__view1 {
+        border-bottom: 2px solid grey;
+      }
+    }
+  }
+}

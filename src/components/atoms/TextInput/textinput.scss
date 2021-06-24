@@ -1,0 +1,17 @@
+@import '../../../styles';
+
+.text-input {
+  width: calc(100% - 24px);
+  height: pxToRem(20);
+  padding: pxToRem(8) pxToRem(12);
+  border: 1px solid grey;
+  border-radius: pxToRem(4);
+  background-color: #ebebeb;
+  font-size: 14px;
+  &:focus {
+    outline: none;
+  }
+  @include screen(mobile) {
+    height: pxToRem(24);
+  }
+}
